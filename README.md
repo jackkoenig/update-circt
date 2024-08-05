@@ -36,6 +36,13 @@ binaries/libraries in a downstream project.
     # Default: './etc/circt.json'
     circt-config: ''
 
+    # Check if the corresponding version of the Maven artifact
+    # org.chipsalliance:llvm-firtool has been published.  If this option is
+    # true, the workflow will only open the PR if the Maven artifact exists.
+    #
+    # Default: false
+    check-for-maven-artifact: boolean
+
     # A GitHub token with sufficient permissions to create Pull Requests
     #
     # Default: ${{ github.token }}
